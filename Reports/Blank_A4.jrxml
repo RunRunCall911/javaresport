@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 8.2.0.final using JasperReports Library version 6.20.3-415f9428cffdb6805c6f85bbb29ebaf18813a2ab  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" pageWidth="400" pageHeight="640" columnWidth="360" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.report.description" value=""/>
+	<parameter name="IdCliente" class="java.lang.String"/>
+	<parameter name="fecha_corte" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="124" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="60" splitType="Stretch">
+			<staticText>
+				<reportElement x="100" y="10" width="150" height="30" />
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Agrifood Alliance SA de CV Dalia 1990, 45220 Nextipac, Jal.]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="81" splitType="Stretch">
+			<staticText>
+				<reportElement x="113" y="10" width="125" height="30" />
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Pesaje RECEPCIÓN]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="240" y="10" width="100" height="30" />
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$P{IdCliente}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="125" y="40" width="100" height="30"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha:]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="170" y="40" width="100" height="30" />
+				<textFieldExpression><![CDATA[$P{fecha_corte}]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm">
+				<reportElement x="270" y="40" width="100" height="30" />
+				<textFieldExpression><![CDATA[]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
